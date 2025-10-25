@@ -1,0 +1,16 @@
+# Abaikan virtual environment
+venv/
+
+# Abaikan file dan folder sementara Python
+__pycache__/
+*.pyc
+*.pyo
+*.pkl
+.DS_Store
+
+# Abaikan file log dan cache
+*.log
+.cache/
+
+# Ignore Firebase credentials
+credentials/*.json

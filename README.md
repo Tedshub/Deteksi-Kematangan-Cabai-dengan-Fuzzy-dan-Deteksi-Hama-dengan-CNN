@@ -25,15 +25,37 @@ Aplikasi ini dibangun menggunakan **Streamlit** sebagai antarmuka web interaktif
 
 ## Struktur Folder
 ```
-DeteksiHamaCabai/
+STREAMLIT_DETEKSI_CABAI_DAN_HAMA/
 │
-├── venv/                      # Virtual environment
-├── main.py                    # File utama aplikasi Streamlit
-├── requirements.txt           # Daftar dependensi
-├── models/                    # Model CNN dan konfigurasi fuzzy
-├── data/                      # Dataset pelatihan dan pengujian
-├── utils/                     # Fungsi bantu untuk deteksi dan preprocessing
-└── README.md
+├── .idea/                                   # Konfigurasi project untuk IDE (misal PyCharm)
+│   ├── inspectionProfiles/
+│   ├── misc.xml
+│   ├── modules.xml
+│   ├── Streamlit_Deteksi_Cabai_dan_Hama.iml
+│   ├── vcs.xml
+│   └── workspace.xml
+│
+├── credentials/
+│   └── iot-kematangancabai-hama-firebase-adminsdk-xxxx.json   # Kredensial Firebase
+│
+├── model_hama/
+│   └── hama_cabai_MobileNetV2_final_e38.weights.h5             # Model CNN untuk deteksi hama
+│
+├── pages/
+│   ├── 1_kematangan_fuzzy.py                                   # Modul deteksi kematangan cabai (Fuzzy)
+│   ├── 2_deteksi_hama.py                                       # Modul deteksi hama (CNN)
+│   └── 3_Alat_siram_dan_pupuk.py                               # Modul kontrol alat siram & pupuk
+│
+├── venv/                                                       # Virtual environment (tidak di-push ke repo)
+│
+├── yolo_weight_cabai/
+│   └── best.pt                                                 # Model YOLO untuk deteksi objek cabai
+│
+├── .gitignore                                                  # File untuk mengecualikan file/folder tertentu dari Git
+├── final_train.ipynb                                           # Notebook pelatihan model
+├── main.py                                                     # File utama Streamlit
+├── README.md                                                   # Dokumentasi proyek
+└── requirements.txt                                            # Daftar dependensi Python
 ```
 
 ---
